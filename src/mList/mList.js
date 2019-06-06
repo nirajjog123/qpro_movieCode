@@ -7,7 +7,13 @@ constructor(){
     super();
 }
 
-
-
-
+render(){
+    return(
+        <div>
+in list
+        </div>
+    );
 }
+}
+
+export default mList;

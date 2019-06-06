@@ -8,6 +8,19 @@ function App() {
   return (
     <div className="App">
     <Router>
+    <nav>
+          <ul>
+            <li>
+              <Link to="/list">Movie List</Link>
+            </li>
+            <li>
+              <Link to="/add">Movie Add</Link>
+            </li>
+            <li>
+              <Link to="/info">Movie Info</Link>
+            </li>
+          </ul>
+        </nav>
       <Route exact path='/list' component={MvList}></Route>
       <Route  path='/add' component={MvAdd}></Route>
       <Route  path='/info' component={MvInfo}></Route>
