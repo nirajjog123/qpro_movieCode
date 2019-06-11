@@ -11,7 +11,8 @@ constructor(props){
 render(){
     let data = JSON.parse(localStorage.data);
     return(
-        <div>
+        <div className='mAddContainer'>
+            <div className='mAddTitle'>Your Movie Info Is Lined Up!!</div>
            <table id='tableData' className='mInfoTableContainer'>
             <tbody>
         <tr>

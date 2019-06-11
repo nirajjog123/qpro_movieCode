@@ -23,7 +23,7 @@ render(){
   
     return(
     <div className='listContainer'>
-        <div>Your Movie List Is Here!!</div>
+        <div className='mAddTitle'>Your Movie List Is Here!!</div>
         <table id='tableData' align="center" className='center'>
             <tbody>
         <tr>

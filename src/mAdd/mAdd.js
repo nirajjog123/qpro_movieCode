@@ -61,7 +61,7 @@ handlesubmit(e){
       }
 
       // Comments
-      if(!fields["chars_left"] || fields["chars_left"] == 150){
+      if(!fields["chars_left"] || fields["chars_left"] == this.max_chars){
         formIsValid = false;
         errors["chars_left"] = "Cannot be empty";
       }
@@ -95,35 +95,33 @@ handleChange(e) {      //count characters
 render(){
     return(
         <div className='mAddContainer'>
-            <div>Enter Your Movie Details Here!!</div>
-        <form  onSubmit= {this.handlesubmit} ref="myForm" id= 'myForm' className='formContainer'>
-        <div className="formElements clearfix">
-            <div className='titles'><b>Movie Name</b></div> 
-            <input type='text' id='mName' onChange={this.handleName}   placeholder='Enter text'></input>
-            <span className="error">{this.state.errors["mName"]}</span>
+                    <div className='mAddTitle'>Enter Your Movie Details Here!!</div>
+                        <form  onSubmit= {this.handlesubmit} ref="myForm" id= 'myForm' className='formContainer'>
+                        <div className="formElements clearfix">
+                            <div className='titles'><b>Movie Name</b></div> 
+                            <input type='text' id='mName' onChange={this.handleName}   placeholder='Enter text'></input>
+                            <span className="error">{this.state.errors["mName"]}</span>
+                        </div>
+                        <div className="formElements clearfix">
+                            <div className='titles'><b>Release Date</b></div>
+                            <input type='date' id='mReleaseDAte' onChange={this.handleRelease}  placeholder='Enter Date'></input>
+                            <span className="error">{this.state.errors["mRelease"]}</span>
+                        </div>
+                        <div className="formElements clearfix">
+                            <div className='titles'><b>Ratings     </b></div><input type='text' id='mRating' onChange={this.handleRating}  placeholder='Enter Number'></input>
+                            <span className="error">{this.state.errors["mRating"]}</span>
+                        </div>
+                        <div className="formElements clearfix">
+                            <div className='titles'><b>Comments</b></div>
+                            <input type='textarea' onChange={this.handleChange.bind(this)} maxLength='150' placeholder='Enter text'></input>
+                            <span className="error">{this.state.errors["chars_left"]}</span> 
+                        </div>
+                        <div className="formElements clearfix">
+                            <p className="charLeft">Characters Left: {this.state.chars_left}</p>    
+                     </div>   
+                        <button type='submit'className='submitClass'>Submit Data</button>
+                         </form>
         </div>
-        <div className="formElements clearfix">
-            <div className='titles'><b>Release Date</b></div>
-            <input type='date' id='mReleaseDAte' onChange={this.handleRelease}  placeholder='Enter Date'></input>
-            <span className="error">{this.state.errors["mRelease"]}</span>
-        </div>
-        <div className="formElements clearfix">
-            <div className='titles'><b>Ratings     </b></div><input type='text' id='mRating' onChange={this.handleRating}  placeholder='Enter Number'></input>
-            <span className="error">{this.state.errors["mRating"]}</span>
-        </div>
-        <div className="formElements clearfix">
-            <div className='titles'><b>Comments</b></div>
-            <input type='textarea' onChange={this.handleChange.bind(this)} maxLength='150' placeholder='Enter text'></input>
-            <span className="error">{this.state.errors["chars_left"]}</span> 
-        </div>
-        <div className="formElements clearfix">
-            <p className="charLeft">Characters Left: {this.state.chars_left}</p>    
-        </div>
-           
-        
-    <button type='submit'className='submitClass'>Submit Data</button>
-        </form>
-         </div>
     );
 }
 

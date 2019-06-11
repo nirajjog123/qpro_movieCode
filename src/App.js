@@ -6,12 +6,6 @@ import MvAdd from './mAdd/mAdd';
 import MvInfo from './mInfo/mInfo';
 class App extends React.Component{
 
-  constructor(){
-    super();
-    this.state={
-      data:''
-    }
-  }
   render(){
   return (
     <div className="App">

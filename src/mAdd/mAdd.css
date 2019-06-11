@@ -75,3 +75,8 @@
   float: left;
   margin: 0px 0px 22px 25%;
 }
+.mAddTitle {
+  font-size: 25px;
+  font-family: fantasy;
+  font-style: normal;
+}
