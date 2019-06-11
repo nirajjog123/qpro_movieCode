@@ -1,0 +1,14 @@
+.cellClass {
+    width:450px; height:450px;
+    text-align:center; 
+    vertical-align:middle
+}
+
+.imageFix {
+    max-height:100%; 
+    max-width:100%
+}
+.mInfoTableContainer{
+    margin-left: auto;
+    margin-right: auto;
+}

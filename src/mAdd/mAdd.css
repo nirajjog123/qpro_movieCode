@@ -1,0 +1,77 @@
+  input {
+    width: 100%;
+  }
+
+  input {
+    width: 60%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    }
+
+  input[type=text]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+
+  .submitClass {
+    background-color: rgb(2, 17, 20);
+    border: none;
+    color: rgb(200, 225, 226);
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  .titles {
+    float: left;
+  }
+  .mAddContainer {
+    padding-left: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .formContainer{
+    margin-top: 30px;
+  }
+  .error{
+    margin-left: 5px;
+    font-size: 13px;
+    color: red;
+  }
+
+  .clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+  .clearfix { display: inline-block; }
+  /* start commented backslash hack \*/
+  * html .clearfix { height: 1%; }
+  .clearfix { display: block; }
+
+  .formElements .titles {
+    width: 25%;
+    float: left;
+}
+.formElements input {
+  width: 50%;
+  float: left;
+  margin: 0px 0px 22px 0px;
+}
+.formElements .error {
+  width: 16%;
+  padding: 14px;
+  text-align: left;
+  float: left;
+}
+.charLeft {
+  
+  float: left;
+  margin: 0px 0px 22px 25%;
+}
