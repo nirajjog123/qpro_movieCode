@@ -3,9 +3,7 @@ import './mList.css';
 
 class mList extends Component{
 
-constructor(props){
-    super(props);
-}
+
 
 render(){
     let data = JSON.parse(localStorage.data);
